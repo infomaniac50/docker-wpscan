@@ -8,6 +8,7 @@ Start WPScan either directly
 ```sudo docker run wpscanteam/wpscan wpscan -u http://yourblog.com [options]```
 
 or in the container: 
+
 ```sudo docker run -t -i wpscanteam/wpscan bash```
 
 ```# wpscan -u http://yourblog.com [options]```
