@@ -16,8 +16,8 @@ RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm"
 RUN echo 'source /usr/local/rvm/scripts/rvm' >> ~/.bashrc
 
 # Recommended Ruby Version for WPScan
-RUN /bin/bash -l -c "rvm install 2.1.2"
-RUN /bin/bash -l -c "rvm use 2.1.2 --default"
+RUN /bin/bash -l -c "rvm install 2.1.3"
+RUN /bin/bash -l -c "rvm use 2.1.3 --default"
 
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 RUN /bin/bash -l -c "gem install bundler"
@@ -32,3 +32,4 @@ RUN echo '#!/bin/bash' > /bin/wpscan
 RUN echo 'source /usr/local/rvm/scripts/rvm' >> /bin/wpscan # Needed to be able run the wpscan command directly with 'docker run'
 RUN echo 'cd /wpscan/ && ./wpscan.rb "$@"' >> /bin/wpscan
 RUN chmod 755 /bin/wpscan
+RUN wpscan --update
