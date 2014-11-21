@@ -11,6 +11,7 @@ RUN apt-get update
 RUN apt-get -y install libcurl4-gnutls-dev libxml2 libxml2-dev libxslt1-dev ruby-dev git curl make ca-certificates procps
 
 # RVM Install
+RUN \curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 RUN \curl -sSL https://get.rvm.io | bash -s stable --ruby
 RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm"
 RUN echo 'source /usr/local/rvm/scripts/rvm' >> ~/.bashrc
