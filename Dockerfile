@@ -17,8 +17,8 @@ RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm"
 RUN echo 'source /usr/local/rvm/scripts/rvm' >> ~/.bashrc
 
 # Recommended Ruby Version for WPScan
-RUN /bin/bash -l -c "rvm install 2.1.3"
-RUN /bin/bash -l -c "rvm use 2.1.3 --default"
+RUN /bin/bash -l -c "rvm install 2.2.2"
+RUN /bin/bash -l -c "rvm use 2.2.2 --default"
 
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 RUN /bin/bash -l -c "gem install bundler"
