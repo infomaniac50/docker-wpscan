@@ -34,7 +34,7 @@ RUN /bin/bash -l -c "bundle install --without test"
 
 RUN echo '#!/bin/bash' > /bin/wpscan
 RUN echo 'source /usr/local/rvm/scripts/rvm' >> /bin/wpscan # Needed to be able run the wpscan command directly with 'docker run'
-RUN echo 'cd /wpscan/ && ./wpscan.rb "$@"' >> /bin/wpscan
+RUN echo 'cd /wpscan/ && ./wpscan.rb --no-banner --update && ./wpscan.rb "$@"' >> /bin/wpscan
 RUN chmod 755 /bin/wpscan
 RUN wpscan --update
 
