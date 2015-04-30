@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM ubuntu:latest
 MAINTAINER WPScan Team <wpscanteam@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -10,7 +10,7 @@ RUN echo 'APT::Install-Suggests "0";' >> /etc/apt/apt.conf
 
 RUN apt-get update
 RUN apt-get -qy dist-upgrade
-RUN apt-get -y install libcurl4-gnutls-dev libxml2 libxml2-dev libxslt1-dev ruby-dev git curl make ca-certificates procps build-essential
+RUN apt-get -y install curl git libcurl4-gnutls-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential
 
 # RVM Install
 RUN \curl -sSL https://rvm.io/mpapis.asc | gpg --import -
