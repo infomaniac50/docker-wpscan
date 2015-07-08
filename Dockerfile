@@ -1,5 +1,5 @@
 FROM debian:latest
-MAINTAINER WPScan Team <wpscanteam@gmail.com>
+MAINTAINER WPScan Team <team@wpscan.org>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV PATH /usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
